@@ -1,11 +1,9 @@
 import express from "express";
 import { WebSocketServer } from "ws";
-import YahooFinance from "yahoo-finance2";
+import yahooFinance from "yahoo-finance2";
 
 const app = express();
 const port = 3000;
-
-const yahooFinance = new YahooFinance();
 
 // Función para obtener precios usando yahoo-finance2
 async function getPrice(symbol: string): Promise<{
